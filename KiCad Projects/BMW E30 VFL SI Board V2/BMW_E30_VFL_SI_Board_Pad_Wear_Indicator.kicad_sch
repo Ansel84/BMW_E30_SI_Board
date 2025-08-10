@@ -1,17 +1,20 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "0aca1cae-b25b-41c5-8f81-283bd5f53ebf")
 	(paper "A4")
 	(title_block
 		(title "BMW E30 Pre-Facelift SI Board")
 		(date "2024-06-15")
 		(rev "2")
+		(comment 1 "Revision 2.1 made by Reagan Ansel")
 	)
 	(lib_symbols
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -84,7 +87,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -96,7 +99,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -145,9 +148,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -266,10 +272,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Diode:1N4005"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -367,10 +378,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -379,10 +390,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -428,10 +439,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Transistor_BJT:BC327"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -504,6 +518,18 @@
 			(symbol "BC327_0_1"
 				(polyline
 					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
@@ -526,12 +552,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
 					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -550,37 +575,8 @@
 						(type outline)
 					)
 				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
 			(symbol "BC327_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -5.08 0 0)
 					(length 5.715)
@@ -592,6 +588,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -618,12 +632,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+12V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -695,7 +714,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -707,7 +726,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -738,12 +757,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -834,7 +858,83 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 182.245 53.34)
+		(end 214.63 81.28)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 31a30267-b363-4883-9154-a383f7ac663f)
+	)
+	(rectangle
+		(start 71.12 51.435)
+		(end 216.535 126.365)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 817e03ac-7b21-446f-a89e-8e88791bf662)
+	)
+	(text "BMW_E30_VFL_SI_Board_Pad_Wear_Indicator"
+		(exclude_from_sim no)
+		(at 228.854 173.482 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "4adc95d5-1554-42c1-b2e7-549b0b467232")
+	)
+	(text "Brake pad wear indicator"
+		(exclude_from_sim no)
+		(at 85.852 55.118 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9060bdef-6818-48ba-a7e4-932b4c64f64e")
+	)
+	(text "Decoupling close to brake pad \nindicator circuit"
+		(exclude_from_sim no)
+		(at 198.882 56.388 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a64a4091-36a2-4ac9-a836-bc4c1b2d37d4")
+	)
+	(text_box "The T50 connection acts as a lamp test and lights up the bulb during engine cranking"
+		(exclude_from_sim no)
+		(at 176.53 116.84 0)
+		(size 37.465 7.62)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 255 239 232 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "de69d039-4967-44ee-944f-bc85916e0f76")
 	)
 	(junction
 		(at 151.13 93.98)
@@ -1085,92 +1185,6 @@
 			(type default)
 		)
 		(uuid "dcbabc6c-dc00-4822-98f2-4c36df13a951")
-	)
-	(rectangle
-		(start 182.245 53.34)
-		(end 214.63 81.28)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 31a30267-b363-4883-9154-a383f7ac663f)
-	)
-	(rectangle
-		(start 81.915 128.27)
-		(end 81.915 128.27)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 5682fd66-a99c-4020-9356-c58ab2f9f7be)
-	)
-	(rectangle
-		(start 71.12 51.435)
-		(end 216.535 126.365)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 817e03ac-7b21-446f-a89e-8e88791bf662)
-	)
-	(text_box "The T50 connection acts as a lamp test and lights up the bulb during engine cranking"
-		(exclude_from_sim no)
-		(at 176.53 116.84 0)
-		(size 37.465 7.62)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type color)
-			(color 255 239 232 1)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "de69d039-4967-44ee-944f-bc85916e0f76")
-	)
-	(text "BMW_E30_VFL_SI_Board_Pad_Wear_Indicator"
-		(exclude_from_sim no)
-		(at 228.854 173.482 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-			)
-		)
-		(uuid "4adc95d5-1554-42c1-b2e7-549b0b467232")
-	)
-	(text "Brake pad wear indicator"
-		(exclude_from_sim no)
-		(at 85.852 55.118 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "9060bdef-6818-48ba-a7e4-932b4c64f64e")
-	)
-	(text "Decoupling close to brake pad \nindicator circuit"
-		(exclude_from_sim no)
-		(at 198.882 56.388 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a64a4091-36a2-4ac9-a836-bc4c1b2d37d4")
 	)
 	(global_label "CON_2_PAD_I"
 		(shape input)
@@ -1873,7 +1887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9242b354-e570-45e2-a1b9-1d33f09ee139")
-		(property "Reference" "C8"
+		(property "Reference" "C12"
 			(at 176.53 87.6299 0)
 			(effects
 				(font
@@ -1882,7 +1896,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4n7"
+		(property "Value" "100n"
 			(at 176.53 90.1699 0)
 			(effects
 				(font
@@ -1927,7 +1941,7 @@
 		(instances
 			(project "BMW E30 VFL SI Board V2"
 				(path "/b9f8b657-f23f-4f46-b33b-c9c07ea00dca/06cb897c-0efb-438a-95e3-30e073586624"
-					(reference "C8")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -2326,7 +2340,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d2469461-17b1-4738-bbe6-01802ec0aa6b")
-		(property "Reference" "C12"
+		(property "Reference" "C8"
 			(at 201.93 68.5799 0)
 			(effects
 				(font
@@ -2335,7 +2349,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "4n7"
 			(at 201.93 71.1199 0)
 			(effects
 				(font
@@ -2380,7 +2394,7 @@
 		(instances
 			(project "BMW E30 VFL SI Board V2"
 				(path "/b9f8b657-f23f-4f46-b33b-c9c07ea00dca/06cb897c-0efb-438a-95e3-30e073586624"
-					(reference "C12")
+					(reference "C8")
 					(unit 1)
 				)
 			)

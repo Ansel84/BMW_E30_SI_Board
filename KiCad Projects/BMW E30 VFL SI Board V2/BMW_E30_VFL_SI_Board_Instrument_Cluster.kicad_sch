@@ -1,15 +1,26 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "c1d59df1-f91b-4291-8023-7ec8a2d2a074")
 	(paper "A3")
 	(title_block
 		(title "BMW E30 Pre-Facelift SI Board")
 		(date "2024-06-15")
 		(rev "2")
+		(comment 1 "Revision 2.1 made by Reagan Ansel")
 	)
 	(lib_symbols)
+	(text "Cluster Schematic and Pin Assignment"
+		(exclude_from_sim no)
+		(at 354.076 260.604 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "ff74623f-ce1d-4ffb-8a10-513191ca270a")
+	)
 	(image
 		(at 110.49 93.98)
 		(scale 0.805704)
@@ -14178,15 +14189,5 @@
 			"OI7jOF7XUbRpBVxGURQtTKM/GHEcx3Ecx3Ecx+s6ijatgMsoiqKFafQHI47jOI7jOI7jeF1H0aYV"
 			"cBlFUbQwjf5gxHEcx3Ecx3Ecr+so2qxWq/8BBzi1k3lRYu4AAAAASUVORK5CYII="
 		)
-	)
-	(text "Cluster Schematic and Pin Assignment"
-		(exclude_from_sim no)
-		(at 354.076 260.604 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-			)
-		)
-		(uuid "ff74623f-ce1d-4ffb-8a10-513191ca270a")
 	)
 )
