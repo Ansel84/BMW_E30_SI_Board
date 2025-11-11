@@ -9158,7 +9158,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "ITT SAF MCU"
+		(property "Value" "ITT SAF1093 MCU"
 			(at 72.644 183.896 0)
 			(effects
 				(font
